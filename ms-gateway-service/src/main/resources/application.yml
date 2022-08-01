@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ms-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+#      routes:
+#        - id: tp-users-service
+#          uri: lb://tp-users-service
+#          predicates:
+#            - Path=/users/**
+server:
+  port: 8080
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost

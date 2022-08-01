@@ -20,7 +20,7 @@
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
 
 
@@ -35,11 +35,17 @@
 
 
     <modules>
-        <!--<module></module>-->
+        <module>ms-eureka-service</module>
+        <module>ms-gateway-service</module>
+        <module>ms-config-service</module>
     </modules>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
